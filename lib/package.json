@@ -33,6 +33,6 @@
     "three": "0.x.x"
   },
   "peerDependencies": {
-    "three": ">= 0.152.0 < 0.165.0"
+    "three": ">= 0.152.0
   }
 }
