@@ -1,0 +1,38 @@
+{
+  "name": "wiggle",
+  "private": false,
+  "version": "0.0.5",
+  "type": "module",
+  "main": "./dist/wiggle.umd.cjs",
+  "module": "./dist/wiggle.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./spring": {
+      "import": "./dist/WiggleSpring.js",
+      "require": "./dist/WiggleSpring.cjs"
+    },
+    "./rig": {
+      "import": "./dist/WiggleRig.js",
+      "require": "./dist/WiggleRig.cjs"
+    },
+    "./helper": {
+      "import": "./dist/WiggleRigHelper.js",
+      "require": "./dist/WiggleRigHelper.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0",
+    "three": "0.x.x"
+  },
+  "peerDependencies": {
+    "three": ">= 0.152.0 < 0.165.0"
+  }
+}
