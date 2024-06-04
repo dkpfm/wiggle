@@ -1,25 +1,25 @@
 {
   "name": "wiggle",
   "private": false,
-  "version": "0.0.8",
+  "version": "0.0.11",
   "type": "module",
   "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     },
     "./spring": {
-      "import": "./dist/WiggleSpring.js",
+      "import": "./dist/WiggleSpring.mjs",
       "require": "./dist/WiggleSpring.cjs"
     },
     "./rig": {
-      "import": "./dist/WiggleRig.js",
+      "import": "./dist/WiggleRig.mjs",
       "require": "./dist/WiggleRig.cjs"
     },
     "./helper": {
-      "import": "./dist/WiggleRigHelper.js",
+      "import": "./dist/WiggleRigHelper.mjs",
       "require": "./dist/WiggleRigHelper.cjs"
     }
   },
