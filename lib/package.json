@@ -1,7 +1,7 @@
 {
   "name": "wiggle",
   "private": false,
-  "version": "0.0.12",
+  "version": "0.0.13",
   "author": "Xavier (Jack)",
   "license": "MIT",
   "type": "module",
