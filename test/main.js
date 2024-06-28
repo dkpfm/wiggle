@@ -5,14 +5,14 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { TransformControls } from "three/addons/controls/TransformControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { WiggleBone } from "wiggle/spring";
+import { WiggleBone } from "../lib/src/index";
 
 let cameraPersp, cameraOrtho, currentCamera;
 let scene, renderer, control, orbit;
 
 const loader = new GLTFLoader();
 
-const wiggleBones = [];
+let wiggleBones = [];
 
 init();
 
@@ -184,6 +184,11 @@ function onWindowResize() {
 
   render();
 }
+
+setTimeout(() => {
+  wiggleBones.forEach((wb) => wb.dispose());
+  wiggleBones = [];
+}, 1000);
 
 function loop() {
   requestAnimationFrame(loop);
