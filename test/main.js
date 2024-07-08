@@ -64,6 +64,8 @@ function init() {
     const b2 = scene.getObjectByName("Bone2");
     const b3 = scene.getObjectByName("Bone3");
 
+    rootBone.position.x = 4;
+
     wiggleBones.push(new WiggleBone(b1, { stiffness: 700, damping: 13 }));
     wiggleBones.push(new WiggleBone(b2, { stiffness: 700, damping: 13 }));
     wiggleBones.push(new WiggleBone(b3, { stiffness: 700, damping: 13 }));
@@ -185,10 +187,10 @@ function onWindowResize() {
   render();
 }
 
-setTimeout(() => {
-  wiggleBones.forEach((wb) => wb.dispose());
-  wiggleBones = [];
-}, 1000);
+// setTimeout(() => {
+//   wiggleBones.forEach((wb) => wb.dispose());
+//   wiggleBones = [];
+// }, 1000);
 
 function loop() {
   requestAnimationFrame(loop);

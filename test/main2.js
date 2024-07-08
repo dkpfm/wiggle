@@ -5,16 +5,17 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { TransformControls } from "three/addons/controls/TransformControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-// import { WiggleBone } from "/wiggle/spring";
-import { WiggleRig } from "wiggle/rig";
-import { WiggleRigHelper } from "wiggle/helper";
+import { WiggleBone } from "../lib/src/WiggleSpring";
+import { WiggleRig } from "../lib/src/WiggleRig";
+import { WiggleRigHelper } from "../lib/src/WiggleRigHelper";
 
 let cameraPersp, cameraOrtho, currentCamera;
 let scene, renderer, control, orbit;
 
 const loader = new GLTFLoader();
 
-// const wiggleBones = [];
+const wiggleBones = [];
+
 let wiggleRig;
 
 init();
@@ -71,10 +72,10 @@ function init() {
 
     wiggleRig = new WiggleRig(scene.getObjectByName("Box").skeleton);
 
-    // const b1 = scene.getObjectByName("Bone1");
-    // const b2 = scene.getObjectByName("Bone2");
-    // const b3 = scene.getObjectByName("Bone3");
-    // const b4 = scene.getObjectByName("Bone4");
+    const b1 = scene.getObjectByName("Bone1");
+    const b2 = scene.getObjectByName("Bone2");
+    const b3 = scene.getObjectByName("Bone3");
+    const b4 = scene.getObjectByName("Bone4");
 
     // wiggleBones.push(new WiggleBone(b1, { stiffness: 700, damping: 13 }));
     // wiggleBones.push(new WiggleBone(b2, { stiffness: 700, damping: 13 }));
